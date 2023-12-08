@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 2em;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 1.5em;
+    background-color: black;
+}
+
+.img-box {
+    background: var(--img) center;
+    background-size: cover;
+    flex-basis: 300px;
+    position: relative;
+    transition: 400ms all ease;
+    filter: grayscale(100%) opacity(35%);
+
+}
+.img-box:nth-child(odd) {
+    transform: translateY(-20px);
+}
+.img-box:hover {
+    flex-basis: 400px;
+    filter: grayscale(0%) opacity(100%);
+
+}
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#bg-sound {
+    display: none;
+}
